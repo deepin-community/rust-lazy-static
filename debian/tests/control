@@ -1,0 +1,11 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test lazy_static 1.4.0 --all-targets --all-features
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev (>= 0.3.1-~~), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test lazy_static 1.4.0 --all-targets --no-default-features
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev (>= 0.3.1-~~), librust-lazy-static-dev
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test lazy_static 1.4.0 --all-targets --features spin
+Depends: dh-cargo (>= 18), librust-doc-comment-0.3+default-dev (>= 0.3.1-~~), librust-lazy-static+spin-dev
+Restrictions: allow-stderr, skip-not-installable
